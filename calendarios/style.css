@@ -123,3 +123,28 @@ tr:nth-child(odd) {
 tr:nth-child(even) {
   background-color: #1f1f1f;
 }
+
+.description-card {
+  position: absolute;
+  display: none;
+  padding: 10px 5px;
+  background-color: #151515;
+  border: 2px solid #575;
+}
+
+.anchorsList {
+  font-size: 1em;
+  display: flex;
+}
+
+.anchorsList li a {
+  margin-right: 1vw;
+}
+.anchorsList li a .flow {
+  margin-top: 0.1vh;
+}
+
+.noFaculty {
+  background-color: #9a9;
+  color: #151515;
+}
