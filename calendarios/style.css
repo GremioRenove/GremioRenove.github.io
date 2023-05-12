@@ -88,6 +88,7 @@ th {
 tr td:hover,
 tr th:hover {
   background-color: #5955;
+  color: white;
 }
 
 tr:nth-child(odd) {
@@ -135,6 +136,7 @@ tr:nth-child(even) {
 .anchorsList {
   font-size: 1em;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .anchorsList li a {
