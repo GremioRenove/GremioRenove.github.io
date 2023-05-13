@@ -41,7 +41,12 @@ function generateCalendarHTML(month, year, holidays) {
     calendarHTML += "<td></td>";
   }
 
-  // Add cells for each day of the month
+  // Get current date
+  let today = new Date();
+  let currentDay = today.getDate();
+  let currentMonth = today.getMonth();
+  let currentYear = today.getFullYear();
+
   for (let day = 1; day <= daysInMonth; day++) {
     let date = new Date(year, month, day);
     let dayOfWeek = date.getDay();
@@ -54,6 +59,13 @@ function generateCalendarHTML(month, year, holidays) {
       } else {
         calendarHTML += `<td class="holiday" data-day="${day}">${day}</td>`;
       }
+    } else if (
+      day === currentDay &&
+      month === currentMonth &&
+      year === currentYear
+    ) {
+      // Add class to the td element for today
+      calendarHTML += `<td id="todayCell">${day}</td>`;
     } else {
       calendarHTML += `<td>${day}</td>`;
     }

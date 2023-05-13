@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calendário - Grêmio</title>
-    <link rel="stylesheet" href="style.css" />
+    <link id="stylesheet" rel="stylesheet" href="../styles/lightStyle.css" />
+    <script src="../changeStyle.js"></script>
   </head>
   <body>
     <div class="container">
       <h1>
-        <a href="index.html">Voltar <span class="flow"></span></a>
+        <a href="index.html">< <span class="flow"></span></a>
       </h1>
+      <button id="change-mode" onclick="changeMode()">Mudar Estilo</button>
       <div id="calendarContainer"></div>
       <script src="script.js"></script>
     </div>
