@@ -151,7 +151,7 @@ let holidayDescriptions = {
     19: "Dia da Bandeira",
     20: "Dia Nacional da Consciência Negra",
   },
-  11: {
+  12: {
     // December
     22: "Início do Verão - Solstício de Verão",
     24: "Véspera de Natal",
