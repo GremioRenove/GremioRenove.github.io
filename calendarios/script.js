@@ -55,7 +55,21 @@ function generateCalendarHTML(month, year, holidays) {
     }
     if (holidays.includes(day)) {
       if (dayOfWeek === 0 || dayOfWeek === 6) {
-        calendarHTML += `<td class="holiday noFaculty" data-day="${day}">${day}</td>`;
+        if (
+          day === currentDay &&
+          month === currentMonth &&
+          year === currentYear
+        ) {
+          calendarHTML += `<td class="holiday noFaculty" id="todayCell" data-day="${day}">${day}</td>`;
+        } else {
+          calendarHTML += `<td class="holiday noFaculty" data-day="${day}">${day}</td>`;
+        }
+      } else if (
+        day === currentDay &&
+        month === currentMonth &&
+        year === currentYear
+      ) {
+        calendarHTML += `<td class="holiday" id="todayCell" data-day="${day}">${day}</td>`;
       } else {
         calendarHTML += `<td class="holiday" data-day="${day}">${day}</td>`;
       }
